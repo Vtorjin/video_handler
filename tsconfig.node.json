@@ -1,0 +1,45 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.node.json",
+  "exclude": [
+    "preload"
+  ],
+  "include": [
+    "build/**/*.ts",
+    "build/**/*.d.ts",
+    "electron.vite.config.*",
+    "src/server/**/*.ts",
+    "src/main/**/*.ts",
+    "src/preload/**.d.ts",
+    "src/preload/*.ts",
+    "src/preload/webview.ts",
+    "src/preload/index.ts",
+    "src/preload/webview.ts",
+    "config/**.json",
+    "types/**/*.ts",
+    "package.json",
+    "interface.d.ts",
+    "enum.d.ts",
+    "ignore/electron.vite.config.1700646310849.mjs",
+    "ignore/electron.vite.config.1700560758427.mjs",
+    "ignore/electron.vite.config.1698400480374.mjs"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "strict": false,
+    "types": [
+      "electron-vite/node"
+    ],
+    "experimentalDecorators": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "paths": {
+      "@conf/*": [
+        "config/*"
+      ],
+      "~/*": [
+        "./*"
+      ]
+    }
+  }
+}

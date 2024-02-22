@@ -1,0 +1,19 @@
+main.el-main {
+    padding: 0 !important;
+    overflow-y: hidden;
+    box-sizing: border-box;
+    --header-height: 40px;
+}
+
+main.el-main>div.padding {
+    padding: 10px 12px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+
+#setting-form-body .el-drawer__body {
+    padding: 20px 0px !important;
+}

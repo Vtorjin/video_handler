@@ -1,0 +1,60 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+  
+  "include": [
+    "src/renderer/src/env.d.ts",
+    "src/renderer/src/**/*",
+    "src/renderer/src/**/*.svg",
+    "src/renderer/src/**/*.vue",
+    "package.json",
+    "build/**/*.ts",
+    "build/**/*.d.ts",
+    "config/default.json",
+    "types/interface.ts",
+    "types/**/*.ts",
+    "package.json",
+    "interface.d.ts",
+    "enum.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "preload",
+    "**/*.js"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": false,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    "skipLibCheck": true,
+    "noEmit": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "types": [
+      "vite/client",
+      "element-plus/global"
+    ],
+    "paths": {
+      "@renderer/*": [
+        "src/renderer/src/*"
+      ],
+      "@/*": [
+        "src/renderer/src/*"
+      ],
+      "~/*": [
+        "./*"
+      ]
+    }
+  }
+}

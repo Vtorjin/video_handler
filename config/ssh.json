@@ -1,0 +1,10 @@
+{
+    "host": "tty.sdf.org",
+    "port": 22,
+    "username": "vtorjin",
+    "password": "qVuPtMc6Aw4S6A",
+    "projectDir": "templatetest",
+    "projectBackDir": "templatetest_",
+    "projectPubRoot": "myApp",
+    "localBuildPath": "dist"
+}

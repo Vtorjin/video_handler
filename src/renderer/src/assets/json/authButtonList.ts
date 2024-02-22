@@ -1,0 +1,8 @@
+export default{
+  "code": 200,
+  "data": {
+    "useProTable": ["add", "batchAdd", "export", "batchDelete", "status"],
+    "authButton": ["add", "edit", "delete", "import", "export"]
+  },
+  "msg": "成功"
+}

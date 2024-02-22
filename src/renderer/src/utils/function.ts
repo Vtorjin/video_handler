@@ -1,0 +1,25 @@
+import { isObject } from "./is";
+
+export function deepMerge<T = any>(src: any = {}, target: any = {}): T {
+    let key: string;
+    for (key in target) {
+        src[key] = isObject(src[key]) ? deepMerge(src[key], target[key]) : (src[key] = target[key]);
+    }
+    return src;
+}
+
+
+export function imgToBase64(url: string): Promise<string> {
+    return new Promise(async (resolve) => {
+        const response = await fetch(url);
+        const blob = await response.blob();
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            resolve(e.target.result.toString());
+        };
+        reader.onerror = function () {
+            resolve('');
+        }
+        reader.readAsDataURL(blob);
+    })
+}
